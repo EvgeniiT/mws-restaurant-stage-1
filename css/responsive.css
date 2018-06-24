@@ -1,0 +1,51 @@
+body, html {
+  width: 100%;
+  height: 100%;
+}
+/* #maincontent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: space-between;
+} */
+
+@media screen and (min-width: 550px) {
+  #maincontent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* margin-bottom: auto; */
+    align-content: space-around;
+  }
+  #maincontent section {
+    width: 48%;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding: 0 10px; */
+    /* display: flex; */
+  }
+  #restaurant-name {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 300;
+    padding: 10px;
+    margin: 0;
+  }
+  #reviews-container h2 {
+    font-size: 1.5rem;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+  }
+  #reviews-list li {
+    margin: 10px;
+  }
+}
+@media screen and (min-width: 850px) {
+  header, #maincontent, footer {
+    width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
