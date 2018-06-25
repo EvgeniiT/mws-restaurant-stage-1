@@ -19,7 +19,7 @@ body, html {
     align-content: space-around;
   }
   #maincontent section {
-    width: 48%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     /* padding: 0 10px; */
@@ -40,7 +40,27 @@ body, html {
   }
   #reviews-list li {
     margin: 10px;
+
   }
+  #restaurants-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #restaurants-list li {
+      width: 50%;
+      box-sizing: border-box;
+
+  }
+  .filter-options select {
+    font-size: 1rem;
+    height: 40px;
+  }
+  #restaurant-container {
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
 }
 @media screen and (min-width: 850px) {
   header, #maincontent, footer {
