@@ -60,12 +60,17 @@ body, html {
     display: flex;
     flex-wrap: wrap;
   }
-  
+
 }
-@media screen and (min-width: 850px) {
-  header, #maincontent, footer {
-    width: 850px;
+@media screen and (min-width: 960px) {
+  header, #maincontent, #footer, .inside > #footer, #breadcrumb, .inside > header > nav {
+    width: 960px;
     margin-left: auto;
     margin-right: auto;
   }
+  #restaurant-address, #restaurant-hours {
+    width: 960px;
+    text-align: center;
+  }
+
 }
