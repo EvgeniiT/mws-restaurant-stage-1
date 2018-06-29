@@ -1,8 +1,22 @@
 let restaurants,
-  neighborhoods,
-  cuisines
+    neighborhoods,
+    cuisines;
 var newMap
-var markers = []
+var markers = [];
+
+//
+// Registering a Service Worker
+//
+(function() {
+  if (!navigator.serviceWorker) {
+  console.log('Service Worker not supported');
+  return;
+  }
+
+  navigator.serviceWorker.register('/sw.js')
+  .then( () => console.log('Service Worker Registered') )
+  .catch(error => console.log('Registration failed: ', error));
+ })();
 
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
@@ -179,9 +193,11 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
-  li.append(more)
+  more.setAttribute('role', 'Button');
+  more.setAttribute('aria-lable', `View ${restaurant.name} details`);
+  li.append(more);
 
-  return li
+  return li;
 }
 
 /**
