@@ -1,22 +1,22 @@
 let restaurants,
-  neighborhoods,
-  cuisines,
-  newMap;
-let markers = [];
+    neighborhoods,
+    cuisines;
+var newMap
+var markers = [];
 
-// 
+//
 // Registering a Service Worker
-// 
+//
 (function() {
-+  if (!navigator.serviceWorker) {
-+  console.log('Service Worker not supported')
-+  return;
-+  }
-+
-+  navigator.serviceWorker.register('/sw.js')
-+  .then( () => console.log('Service Worker Registered') )
-+  .catch(error => console.log('Registration failed: ', error));
-+ })();
+  if (!navigator.serviceWorker) {
+  console.log('Service Worker not supported');
+  return;
+  }
+
+  navigator.serviceWorker.register('/sw.js')
+  .then( () => console.log('Service Worker Registered') )
+  .catch(error => console.log('Registration failed: ', error));
+ })();
 
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
